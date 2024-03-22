@@ -1,0 +1,44 @@
+---
+title: API
+description: Nextra – Next.js Static Site Generator
+---
+
+import Link from "next/link";
+
+# Nested Link Example
+
+Here's an example of a nested link without a dropdown:
+
+```jsx copy
+import React from "react";
+import Link from "next/link";
+
+const NestedLinks = () => {
+	return (
+		<ul>
+			<li>
+				<Link href="/">Home</Link>
+			</li>
+			<li>
+				<Link href="/about">About</Link>
+			</li>
+			<li>
+				Products
+				<ul>
+					<li>
+						<Link href="/products/product1">Product 1</Link>
+					</li>
+					<li>
+						<Link href="/products/product2">Product 2</Link>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<Link href="/contact">Contact</Link>
+			</li>
+		</ul>
+	);
+};
+
+export default NestedLinks;
+```
